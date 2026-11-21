@@ -1,5 +1,5 @@
-# 记录格式
+# 合成课程资料格式
 
-论证记录以 id、round、claim、evidence、counterclaim、response、position 描述轮次、主张、证据、反方及回应。
+goals 与 rounds 目录记录论证目标和课堂设计。records 中的 claim、evidence-link、counterclaim、response 和 teacher-observation 通过各自 ID 表示一轮讨论的论证关系，next-round-plan 表示后续设计状态。
 
-记录以 UTF-8 JSON 保存，顶层包含 dataset 和 records。每条记录的 id 在文件中唯一。`fixtures/records.json` 中的例子用于说明输入字段和状态取值。
+夹具只包含虚构的课程、任务和学习事件，不含真实学生资料，也不预先给出分析结论。项目当前入口仅检查夹具格式。

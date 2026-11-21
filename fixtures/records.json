@@ -1,32 +1,80 @@
 {
   "dataset": "argument",
+  "catalogs": {
+    "goals": [
+      {
+        "id": "g-1",
+        "description": "qualify-claim-using-counterevidence"
+      }
+    ],
+    "rounds": [
+      {
+        "id": "d-1",
+        "class": "civics-2",
+        "goal": "g-1",
+        "design": "paired-debate-v1"
+      },
+      {
+        "id": "d-2",
+        "class": "civics-2",
+        "goal": "g-1",
+        "design": "paired-debate-v2"
+      }
+    ],
+    "sources": [
+      {
+        "id": "s-1",
+        "scope": "urban-only",
+        "type": "synthetic-statistical-brief"
+      }
+    ]
+  },
   "records": [
     {
-      "id": "g-01",
-      "round": "1",
-      "claim": "ban-single-use-plastic",
-      "evidence": "municipal-report",
-      "counterclaim": "accessibility-needs",
-      "response": "proposed-exemption",
-      "position": "qualified-support"
+      "id": "a-1",
+      "kind": "claim",
+      "round": "d-1",
+      "learner": "l-1",
+      "text": "proposal-improves-access"
     },
     {
-      "id": "g-02",
-      "round": "2",
-      "claim": "ban-single-use-plastic",
-      "evidence": "broken-link",
-      "counterclaim": "cost-impact",
-      "response": "not-recorded",
-      "position": "unchanged"
+      "id": "a-2",
+      "kind": "evidence-link",
+      "round": "d-1",
+      "claim": "a-1",
+      "source": "s-1",
+      "scope": "urban-only"
     },
     {
-      "id": "g-03",
-      "round": "1",
-      "claim": "school-start-time",
-      "evidence": "sleep-study",
-      "counterclaim": "transport-schedule",
-      "response": "compared-tradeoff",
-      "position": "unchanged"
+      "id": "a-3",
+      "kind": "counterclaim",
+      "round": "d-1",
+      "learner": "l-2",
+      "claim": "a-1",
+      "text": "rural-access-uncertain"
+    },
+    {
+      "id": "a-4",
+      "kind": "response",
+      "round": "d-1",
+      "learner": "l-1",
+      "counterclaim": "a-3",
+      "action": "narrowed-scope",
+      "reason": "data-coverage"
+    },
+    {
+      "id": "a-5",
+      "kind": "teacher-observation",
+      "round": "d-1",
+      "design": "paired-debate-v1",
+      "counterevidence-presented": true
+    },
+    {
+      "id": "a-6",
+      "kind": "next-round-plan",
+      "round": "d-2",
+      "design": "paired-debate-v2",
+      "status": "planned"
     }
   ]
 }
